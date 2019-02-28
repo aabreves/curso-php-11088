@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Aula 27/Fev - proc</title>
+		<title>Aula 28/Fev</title>
 	</head>
 
 	<body>
-	<?php
-		
-	
-	
-	?>
 	</body>
 </html>
