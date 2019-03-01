@@ -7,7 +7,7 @@
 	<body>
 		<form id="frmClass2702" 
 		      name="frmClass2702" 
-			  method="POST" 
+			  method="GET" 
 			  action="aula-2702-proc.php" >
 			<label>Nome:</label><br />
 			
