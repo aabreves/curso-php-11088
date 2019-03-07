@@ -18,6 +18,12 @@
          $sLink = '<a href="'.$sHref.'" target="'.$sTarget.'" >'.$sCaption.'</a>';
          echo "<li>$sLink</li>";
 
+         $sHref = "exercices/ex4-pag23-form-v2.php";
+         $sTarget = "_blank";
+         $sCaption = "Exercício 4 da pag 23 (versão 2)";
+         $sLink = '<a href="'.$sHref.'" target="'.$sTarget.'" >'.$sCaption.'</a>';
+         echo "<li>$sLink</li>";
+
          $sHref = "exercices/ex5-pag23-form.php";
          $sTarget = "_blank";
          $sCaption = "Exercício 5 da pag 23";
