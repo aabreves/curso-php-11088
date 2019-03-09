@@ -44,7 +44,8 @@ if ( isset( $_REQUEST["nYear"] ) ){
                 type="number"
                 min="1900"
                 max="2050"
-                value="<?= $nYear;?>" /><br />
+                value="<?= $nYear;?>"
+                required /><br />
          <input id="subVerify"
                 type="submit"
                 value="Verificar" />

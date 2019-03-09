@@ -49,6 +49,17 @@ $asLinks[] = [
         <meta name="viewport"
               content="width=device-width, initial-scale=1" />
         <title>Aula 28/Fev</title>
+
+        <meta charset="utf-8" />
+        
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet"
+              href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -83,6 +94,7 @@ $asLinks[] = [
                     <ul id="ulNavItem2_dropdown_menu">
                         <?php
                         $iCount = count( $asLinks );
+                        // PARA CADA ELEMENTO NO ARRAY $asLinks FAÇA
                         for ( $i = 0; $i < $iCount; $i++ ){
                             $sHref = $asLinks[ $i ][ "href" ];
                             $sTarget = $asLinks[ $i ][ "target" ];
@@ -95,6 +107,11 @@ $asLinks[] = [
                 </li> <!-- <li id="liNavItem2_dropdown" -->
             </ul> <!-- <ul id="ulNavItems" -->            
         </nav> <!-- <nav id="navMain" -->
+        <div style="position:absolute;top:60px;width:100%;height:600px;background-color:#000;padding:10px;">
+            <iframe id="ifrNav" 
+                    name="ifrNav"
+                    style="width:100%;height:100%;background-color:#aaa"></iframe>
+        </div>
     </body>
 </html>
 
