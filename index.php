@@ -34,6 +34,12 @@
             <li>
                 <a href="classes/exercicios.php" target="_self" >Exercícios</a>
             </li>
+            <li>
+                <a href="classes/modelo.php" target="_self" >Modelo</a>
+            </li>
+            <li>
+                <a href="classes/info.php" target="_self" >Info</a>
+            </li>
         </ul>
     </body>
 </html>

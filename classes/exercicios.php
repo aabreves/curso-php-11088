@@ -33,15 +33,15 @@ $asLinks2 = [ [
 ];
 
 $asLinks3 = [ [
-        "href" => "#",
+        "href" => "",
         "target" => "ifrNav",
         "caption" => "Teste 4.1"
      ],[
-        "href" => "#",
+        "href" => "",
         "target" => "ifrNav",
         "caption" => "Teste 4.2"
      ],[
-        "href" => "#",
+        "href" => "",
         "target" => "ifrNav",
         "caption" => "Teste 4.3"
      ] 
