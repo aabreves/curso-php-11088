@@ -15,6 +15,10 @@ $asLinksInfo = [ [
         "href" => "info/user-agent-info.php",
         "target" => "ifrNav",
         "caption" => "User Agent"
+     ],[
+        "href" => "info/superglobals-info.php?teste=123",
+        "target" => "ifrNav",
+        "caption" => "Super globais"
      ] 
 ];
 ?>

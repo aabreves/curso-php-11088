@@ -1,18 +1,10 @@
 <?php
+require_once "../../utilities/table-utilities.php";
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$sUserAgent = $_SERVER["HTTP_USER_AGENT"];
-
-$iIni = strpos( $sUserAgent, "(", 0 ) + 1;
-$iEnd = strpos( $sUserAgent, ")", $iIni );
-
-$sSO = substr( $sUserAgent, $iIni, $iEnd - $iIni );
-
-$asData = explode( ";", $sSO );
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,7 +12,7 @@ $asData = explode( ";", $sSO );
         <meta charset="utf-8" />
         <meta name="viewport"
               content="width=device-width, initial-scale=1" />
-        <title>User Agent</title>
+        <title>Modelo-html</title>
 
         <meta charset="utf-8" />
         
@@ -49,13 +41,11 @@ $asData = explode( ";", $sSO );
         <div id="divContent">
             <?php
                 // TODO:
-                echo "<h5>UserAgent: $sUserAgent</h5>";
-                
-                echo "<h5>Linux: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36</h5>";
-                
-                echo "<pre>";
-                print_r( $asData );
-                echo "</pre>";
+                echo createTable( "SERVER", $_SERVER );
+                echo '<hr />';
+                echo createTable( "ENVIRONMENT", $_ENV );
+                echo '<hr />';
+                echo createTable( "REQUEST", $_REQUEST );
             ?>
         </div>
     </body>
