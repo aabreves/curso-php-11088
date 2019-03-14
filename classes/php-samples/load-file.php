@@ -4,11 +4,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+$sFileName = "../../data/main_index.csv";
+
+// PRIMEIRA FORMA: fopen / fgets / fclose
+// o prefixo rc é para indicar "resource"
+$rcFile = fopen( $sFileName, "r" );
+
+$sFileContent_fgets = "";
+if ( $rcFile ){
+    $sStatus_fst = "Arquivo aberto com sucesso!";
+    
+    // File stuff - read/write    
+    while ( $sLine = fgets( $rcFile ) ){
+        $sFileContent_fgets .= $sLine;
+    }    
+    fclose( $rcFile );
+}
+else{
+    $sStatus_fst = "Erro ao abrir arquivo!";
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Modelo-html</title>
+        <title>Load File - fopen</title>
 
         <meta charset="utf-8" />
         
@@ -17,11 +38,11 @@
         
         <!-- ARQUIVOS NA PASTA node_modules DO PROJETO -->
         <link rel="stylesheet"
-              href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+              href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
         
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         
         <!-- ARQUIVOS ONLINE (NA NUVEM) - CÓDIGO COPIADO DE
         https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_dropdown-active&stacked=h -->
@@ -37,7 +58,11 @@
         <div id="divContent">
             <?php
                 // TODO:
-                echo "<h5>Aqui vem o conteúdo da nossa página...</h5>";
+                echo "<h4>PRIMEIRA FORMA: fopen / fgets / fclose</h4>";
+                echo "<h5>$sStatus_fst</h5>";
+                echo "<h6><pre>";
+                print_r( $sFileContent_fgets );
+                echo "</pre></h6><hr />";
             ?>
         </div>
     </body>

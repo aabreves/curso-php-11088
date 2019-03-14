@@ -40,6 +40,9 @@
             <li>
                 <a href="classes/info.php" target="_self" >Info</a>
             </li>
+            <li>
+                <a href="classes/php-samples.php" target="_self" >PHP</a>
+            </li>
         </ul>
     </body>
 </html>

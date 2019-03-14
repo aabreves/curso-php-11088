@@ -13,6 +13,14 @@ $sSO = substr( $sUserAgent, $iIni, $iEnd - $iIni );
 
 $asData = explode( ";", $sSO );
 
+// SOLUÇÃO RUIM, MUITO RUIM... RUIM MESMO
+//$asData[0] = trim( $asData[0] );
+//$asData[1] = trim( $asData[1] );
+//$asData[2] = trim( $asData[2] );
+foreach ( $asData as $iIndex => $sValue ){
+    $asData[$iIndex] = trim( $sValue );
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,6 +62,9 @@ $asData = explode( ";", $sSO );
                 echo "<h5>Linux: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36</h5>";
                 
                 echo "<pre>";
+                echo "Ini: $iIni\n";
+                echo "End: $iEnd\n";
+                echo " SO: $sSO\n";
                 print_r( $asData );
                 echo "</pre>";
             ?>

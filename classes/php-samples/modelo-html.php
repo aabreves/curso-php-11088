@@ -17,11 +17,11 @@
         
         <!-- ARQUIVOS NA PASTA node_modules DO PROJETO -->
         <link rel="stylesheet"
-              href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+              href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
         
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         
         <!-- ARQUIVOS ONLINE (NA NUVEM) - CÓDIGO COPIADO DE
         https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_dropdown-active&stacked=h -->
