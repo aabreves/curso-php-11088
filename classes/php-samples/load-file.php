@@ -6,7 +6,7 @@
  */
 $sFileName = "../../data/main_index.csv";
 
-// PRIMEIRA FORMA: fopen / fgets / fclose
+// PRIMEIRA FORMA: funções fopen / fgets / fclose
 // o prefixo rc é para indicar "resource"
 $rcFile = fopen( $sFileName, "r" );
 
@@ -22,6 +22,15 @@ if ( $rcFile ){
 }
 else{
     $sStatus_fst = "Erro ao abrir arquivo!";
+}
+
+// SEGUNDA FORMA: função file
+$asFileContent_file = file( $sFileName, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES  );
+if ( $asFileContent_file ){
+    $sStatus_scn = "Arquivo aberto com sucesso!";
+}
+else{
+    $sStatus_scn = "Erro ao abrir arquivo!";
 }
 
 
@@ -62,6 +71,15 @@ else{
                 echo "<h5>$sStatus_fst</h5>";
                 echo "<h6><pre>";
                 print_r( $sFileContent_fgets );
+                echo "</pre></h6><hr />";
+                echo "<h6><pre>";
+                print_r( explode( "\n", $sFileContent_fgets ) );
+                echo "</pre></h6><hr />";
+                
+                echo "<h4>SEGUNDA FORMA: file</h4>";
+                echo "<h5>$sStatus_scn</h5>";
+                echo "<h6><pre>";
+                print_r( $asFileContent_file );
                 echo "</pre></h6><hr />";
             ?>
         </div>
