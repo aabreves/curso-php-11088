@@ -33,6 +33,7 @@ else{
     $sStatus_scn = "Erro ao abrir arquivo!";
 }
 
+// TERCEIRA FORMA: função get_file_contents
 
 ?>
 <!DOCTYPE html>

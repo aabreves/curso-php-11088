@@ -36,13 +36,13 @@ $asSessionSamples = [ [
 ];
 
 $asObjectsSamples = [ [
-        "href" => "#",
+        "href" => "php-samples/objects-1.php",
         "target" => "ifrNav",
-        "caption" => "Teste 1.1"
+        "caption" => "Objetos"
      ],[
-        "href" => "#",
+        "href" => "php-samples/objects-2.php",
         "target" => "ifrNav",
-        "caption" => "Teste 1.2"
+        "caption" => "Classes & Objetos"
      ] 
 ];
 ?>
