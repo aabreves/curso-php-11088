@@ -85,7 +85,7 @@ function jsonDecode( $json /* 1 */ ){
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Modelo-html</title>
+        <title>JSON</title>
 
         <meta charset="utf-8" />
         
@@ -135,14 +135,11 @@ function jsonDecode( $json /* 1 */ ){
                 
                 echo "<pre>";
                 print_r( $jsonString );
-                echo "</pre>";
-                
+                echo "</pre>";                
                 
                 echo "<pre>";
                 print_r( jsonDecode( $jsonString ) );
                 echo "</pre>";
-                
-                
                 
             ?>
         </div>

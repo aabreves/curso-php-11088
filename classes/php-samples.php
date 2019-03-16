@@ -42,8 +42,16 @@ $asObjectsSamples = [ [
      ],[
         "href" => "php-samples/objects-2.php",
         "target" => "ifrNav",
-        "caption" => "Classes & Objetos"
-     ] 
+        "caption" => "JSON"
+     ],[
+        "href" => "php-samples/objects-3.php",
+        "target" => "ifrNav",
+        "caption" => "Classes & Objetos I"
+     ],[
+        "href" => "php-samples/objects-4.php",
+        "target" => "ifrNav",
+        "caption" => "Classes & Objetos II"
+     ]
 ];
 ?>
 <!DOCTYPE html>

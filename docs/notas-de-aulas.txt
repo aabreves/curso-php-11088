@@ -1,0 +1,234 @@
+
+https://github.com/aabreves/php-model.git
+
+ALESSANDRO BREVES
+
+11088
+
+APACHE
+MYSQL (MARIADB)
+PHP
+
+WAMP
+XAMP
+
+
+POST		=>		$_POST
+
+GET			=>		$_GET
+
+POST + GET			$_REQUEST
+
+
+IDE - Integrated Development Environment
+
+
+Netbeans
+Eclipse
+Visual Code
+Atom
+Sublime
+Visual Studio
+.....
+
+VETOR (OU ARRAY) É UMA LISTA (OU SEQUÊNCIA) 
+	DE VARIÁVEIS
+	
+EM ALGORITMOS:
+	HOMOGENEA - TODAS AS VARIÁVEIS DA SEQUÊNCIA SÃO
+				DO MESMO TIPO
+    TAMANHO FIXO
+	ACESSO ÀS VARIÁVEIS É FEITO ATRAVÉS DE ÍNDICES
+		(O VETOR É INDEXADO) E OS INDICES SÃO NÚMEROS
+		INTEIROS
+		
+EM PHP:
+	HETEREOGENEA
+	TAMANHO VARIÁVEL
+	ACESSO INDEXADO
+		OS INDICES PODEM SER NÚMEROS INTEIROS
+		OU STRINGS
+
+
+
+
+O QUE É   TIMESTAMP  ???
+
+TIMESTAMP OU CARIMBO DE TEMPO
+É UMA MEDIÇÃO DO TEMPO UTILIZADA EM SISTEMAS
+COMPUTACIONAIS
+
+TIMESTAMP É O NÚMERO DE SEGUNDO DECORRIDOS
+A PARTIR DE 1 DE JANEIRO DE 1970 ATÉ A DATA
+EM QUESTÃO.
+
+
+1 
+2
+2.5
+
+https://github.com/aabreves/curso-php-11088
+
+https://github.com/aabreves/curso-php-11088.git
+
+yarn
+
+npm node package manager
+
+
+
+FUNÇÕES		(FUNÇÕES E PROCEDIMENTOS)
+
+
+function nomeDaFuncao( $params ){
+
+
+	[return $valor;]
+} // function nomeDaFuncao( $params ){
+
+//
+
+// ARRAY É UMA SEQUÊNCIA DE VARIÁVEIS INDEXADAS
+$input["id"]    = "myNumber";
+$input["type"]  = "number";
+$input["class"] = "input-group";
+
+// OBJETO É UMA SEQUÊNCIA DE VARIÁVEIS NOMEADAS
+$input->id    = "myNumber";
+$input->type  = "number";
+$input->class = "input-group";
+
+
+$foo test
+$foo global
+
+TAREFA 1:
+
+1-CRIAR UM ARQUIVO CHAMADO table-utilities.php COM UMA FUNÇÃO
+CHAMADA createTable( ... ) NOS MESMO MOLDES DA FUNÇÃO
+buildDropdownMenu( ... );
+
+2-CRIAR UM ARQUIVO PARA EXIBIR AS SUPERGLOBAIS CRIADAS
+PELOS SERVIDOR E PELO SO. ( $_SERVER, $_ENV ). CHAMEM
+O ARQUIVO DE superglobals-info.php
+
+3-CRIEM UM NOVO ITEM DE MENU NO MENU DROPDOWN DA PÁGINA
+info.php
+
+
+TAREFA 2:
+
+User Agent Info
+
+Qual é o SO?
+	Windows ou Linux?
+	32 bits ou 64 bits?
+	
+Qual é o IP do cliente?	
+
+
+MANIPULAÇÃO DE STRINGS
+Windows NT 6.1; Win64; x64
+[0] => Windows NT 6.1
+[1] => Win64
+[2] => x64
+
+
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+
+ini = 12
+end = 39
+
+substr começa em 12 e tem 28 (39 - 12 = 27)
+
+CSV - comma separated values ( "," " " ";" "|" )
+
+// ********************************************
+TAREFA PARA CASA:
+
+O QUE SIGNIFICA O CONTEÚDO DO $_SERVER["USER_AGENT"]???
+
+
+
+
+ABRIR O ARQUIVO (OU CRIAR)			- fopen
+
+LER E/OU GRAVAR DADOS NO ARQUIVO	- fread / fwrite
+
+FECHAR O ARQUIVO					- fclose
+
+
+
+
+AJAX
+
+Assinchronous Javascrip And XML
+
+
+
+ARRAY: sempre representado entre colchetes []
+
+$aVarName = [];      // array vazio
+$aVarName = array(); // versões antigas do PHP
+
+$aVarName[] = 3;     // adiciona elementos ao array
+$aVarName[] = 5;
+$aVarName[] = 7;
+
+$aVarName = [ 2, 6, 9 ];      // array com três elementos
+$aVarName = array( 2, 6, 9 ); // versões antigas do PHP
+- nesta forma cria-se o array com a indexação
+  tradicional : sequencia de número inteiros
+                começando em 0
+  
+// **********************************************
+$aVarName = [];      // array vazio
+
+$aVarName[3] = 3;     // adiciona elementos ao array
+$aVarName[1] = 5;
+$aVarName[8] = 7;
+- nesta forma o array não tem os indices em sequencia
+
+// **********************************************
+$aVarName = [];      // array vazio
+
+$aVarName[ "teste1" ] = 3;  // adiciona elementos ao array
+$aVarName[ "abacaxi" ] = 5;
+$aVarName[ "nome" ] = 7;
+
+$aVarName = [ "teste1" => 2, "abacaxi" => 6, "nome" => 9 ];
+- nesta forma cria-se o array com a indexação
+  associativa : os indices são definidos por strings
+  
+  
+INDEPENDENTE DA FORMA COMO O ARRAY É CRIADO E DA FORMA
+COMO ELE É INDEXADO, NÓS SEMPRE TEMOS UMA SEQUENCIA DE
+VARIAVEIS INDEXADAS;
+
+UM OBJETO TAMBÉM É DEFINIDO (ENTRE OUTRA COISAS) POR UMA
+SEQUENCIA DE VARIÁVEIS  (COMO UM ARRAY) PORÉM ESTA SEQUENCIA
+É UMA SEQUENCIA DE VARIAVEIS NOMEADAS, OU SEJA, CADA VARIÁVEL
+TEM UM NOME.
+
+// **********************************************
+QUAIS SÃO AS PROPRIEDADES DE UM OBJETO;
+AS PROPRIEDADES REPRESENTAM OS VALORES QUE CARACTERIZAM
+O OBJETO
+
+
+objetos do tipo Menu:
+	id		: string
+	caption : strings
+	itens   : array de ItemDeMenu
+
+objetos do tipo ItemDeMenu
+	href    : string
+	caption : string
+	target  : string
+
+
+
+
+
+
+
