@@ -1,5 +1,5 @@
 <?php
-require_once "utilities/menu-utilities.php";
+require_once "../utilities/menu-utilities.php";
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
@@ -7,61 +7,16 @@ require_once "utilities/menu-utilities.php";
  * and open the template in the editor.
  */
 
-$asAulas = [ [
-        "href" => "classes/aula-2702.php",
+$asLinks1 = [ [
+        "href" => "create-user-admin.php",
         "target" => "ifrNav",
-        "caption" => "Aula 27/02"
-     ],[
-        "href" => "classes/aula-2802.php",
+        "caption" => "Admin"
+     ]/*,[
+        "href" => "#",
         "target" => "ifrNav",
-        "caption" => "Aula 28/02"
-     ],[
-        "href" => "classes/aula-0103.php",
-        "target" => "ifrNav",
-        "caption" => "Aula 01/03"
-     ] 
+        "caption" => "Teste 1.2"
+     ] */
 ];
-
-$asExercices = [ [
-        "href" => "classes/exercicios_old.php",
-        "target" => "_self",
-        "caption" => "Exercícios - old"
-     ],[
-        "href" => "classes/exercicios.php",
-        "target" => "_self",
-        "caption" => "Exercícios"
-     ]
-];
-
-$asModules = [ [
-        "href" => "classes/modelo.php",
-        "target" => "_self",
-        "caption" => "Modelo"
-     ],[
-        "href" => "classes/info.php",
-        "target" => "_self",
-        "caption" => "Info"
-     ],[
-        "href" => "classes/php-samples.php",
-        "target" => "_self",
-        "caption" => "PHP"
-     ]
-];
-
-$asDeploy = [ [
-        "href" => "deploy/deploy.php",
-        "target" => "_self",
-        "caption" => "Deploy"
-     ]
-];
-
-$asCRUD = [ [
-        "href" => "crud/crud.php",
-        "target" => "_self",
-        "caption" => "Cadastros"
-     ]
-];
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -78,11 +33,11 @@ $asCRUD = [ [
         
         <!-- ARQUIVOS NA PASTA node_modules DO PROJETO -->
         <link rel="stylesheet"
-              href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+              href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
         
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         
         <!-- ARQUIVOS ONLINE (NA NUVEM) - CÓDIGO COPIADO DE
         https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_dropdown-active&stacked=h -->
@@ -98,22 +53,17 @@ $asCRUD = [ [
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" 
                href="#">
-                <img src="media/images/bird.jpg" 
+                <img src="../media/images/bird.jpg" 
                      alt="Logo" 
                      style="width:40px;">
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" 
-                       href="index.php">Home</a>
+                       href="../index.php">Home</a>
                 </li>
                 <?php
-                    // buildDropdownMenu( $sId, $sTitle, $asLinks ) : string
-                    echo buildDropdownMenu( "NavItem1", "Aulas", $asAulas );
-                    echo buildDropdownMenu( "NavItem2", "Exercícios", $asExercices );
-                    echo buildDropdownMenu( "NavItem3", "Módulos", $asModules );
-                    echo buildDropdownMenu( "NavItem4", "Deploy", $asDeploy );
-                    echo buildDropdownMenu( "NavItem5", "Cadastros", $asCRUD );
+                    echo buildDropdownMenu( "NavItem1", "Deploy", $asLinks1 );
                 ?>
             </ul>
         </nav>
