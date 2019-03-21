@@ -7,11 +7,14 @@
 require_once "../../core/autoloader.php";
 //require_once '../../core/classDatabase.php';
 
-$dbData = new Products();
-//$dbData = newObject( "Database" );
-//$dsProducts = newObject( "Products" );
-$dbData->selectAll();
-//$dbData->select( [ "ProductId", "ProductName" ], [] );
+$dbData = new Database();
+
+$dbData->startDatabase();
+$sStatus = $dbData->status();
+
+$dbData->select( "products", [ "ProductId", 
+                               "ProductName", 
+                               "UnitsInStock" ], [] );
 
 ?>
 <!DOCTYPE html>

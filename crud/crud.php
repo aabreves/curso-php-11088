@@ -1,4 +1,5 @@
 <?php
+require_once "../core/autoloader.php";
 require_once "../utilities/menu-utilities.php";
 
 /* 

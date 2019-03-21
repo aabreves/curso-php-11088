@@ -120,10 +120,16 @@ class Database{
      *                          - SE FOR UM ARRAY VAZIO ENTÃO NÃO
      *                            TEM FILTRO
      */
-    public function select( $sTable, array $asFields, array $asFilter ){
+    public function select_( $sTable, array $asFields, array $asFilter ){
         // TODO: montar o comando SQL de acordo com os parametros
-        $sql = "SELECT * FROM $sTable";
+        if ( count( $asFields ) === 0 ){
+            $sFields = "*";
+        } // if ( count( $asFields ) === 0 ){
+        else{
+            $sFields = $this->getFieldsList( $asFields );
+        } // if ( count( $asFields ) === 0 ){ .. else
         
+        $sql = "SELECT $sFields FROM $sTable";        
         
         $this->exec( $sql );
         
@@ -144,6 +150,30 @@ class Database{
     public function getRecord_assoc(){
         return mysqli_fetch_assoc( $this->vQueryResult );
     }
+    
+    private function getFieldsList( array $asFields ){            
+        // "ProductId, ProductName, UnitsInStock"
+        if ( 1 ){
+            // SOLUÇÃO 1
+            $i = 0;
+            foreach( $asFields as $sField ){
+                $i++;
+                if ( $i === 1 ){
+                    $sFields = $sField;
+                    continue;
+                } // if ( $i === 1 ){
+                $sFields .= ", $sField";                
+            } // foreach( $asFields as $sField ){
+        }
+        else{
+            // SOLUÇÃO 2
+            $sFields = array_shift( $asFields );                
+            foreach( $asFields as $sField ){
+                $sFields .= ", $sField";                
+            } // foreach( $asFields as $sField ){                
+        }
+        return $sFields;
+    } // private function getFieldsList( array $asFields ){
 
 } // class Database{
 
