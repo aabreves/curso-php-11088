@@ -129,7 +129,36 @@ class Database{
             $sFields = $this->getFieldsList( $asFields );
         } // if ( count( $asFields ) === 0 ){ .. else
         
-        $sql = "SELECT $sFields FROM $sTable";        
+        $sWhere = "";
+        if ( count( $asFilter ) !== 0 ){
+            
+            // $asFilter = [ "ProductId" => 33 ];
+            // WHERE ProductId=33
+            // 
+            // $asFilter = [ "SupplierId" => 3, "CategoryId" => 4 ];
+            // WHERE SupplierId=3 AND CategoryId=4            
+            if ( 1 ){
+                $i = 0;
+                foreach ( $asFilter as $sKey => $vValue ){
+                    $i++;
+                    if ( $i === 1 ){
+                        $sWhere = " WHERE $sKey='$vValue'";
+                        continue;
+                    } // if ( $i === 1 ){
+                    $sWhere .= " AND $sKey='$vValue'";
+                } // foreach ( $asFilter as $sKey => $vValue ){
+            }
+            else{
+                $asKey = each( $asFilter );
+                $sWhere = " WHERE {$asKey["key"]}='{$asKey["value"]}'";
+                array_shift( $asFilter );
+                foreach ( $asFilter as $sKey => $vValue ){
+                    $sWhere .= " AND $sKey='$vValue'"; 
+                } // foreach ( $asFilter as $sKey => $vValue ){
+            }
+        } // if ( count( $asFilter ) !== 0 ){
+        
+        $sql = "SELECT $sFields FROM $sTable$sWhere";        
         
         $this->exec( $sql );
         

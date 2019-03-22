@@ -21,6 +21,12 @@ class Dataset extends Database{
         $this->select_( $this->sTable, $this->asFields, [] );
     }
     
+    public function selectOne( $vItemId ){
+        $sPrimaryKey = array_keys( $this->abPrimary )[0];
+        $asFilter = [ $sPrimaryKey => $vItemId ];
+        $this->select_( $this->sTable, $this->asFields, $asFilter );
+    }
+    
     public function select( array $asFields, array $asFilter ){
         $this->select_( $this->sTable, $this->asFields, $asFilter );
     }
