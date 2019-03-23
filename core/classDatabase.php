@@ -95,9 +95,30 @@ class Database{
         } // if ( $this->dbConn ){
     } // private function exec( $sqlCommand ){
 
-    public function insert(){
+    protected function insert_( $sTable, array $asData ){
         // TODO:
-    }
+        // INSERT INTO <table> ( columns ) VALUES ( values )
+        // $asData = [ "column1" => "value1", "column2" => "value2", ... ]
+        $sColumns = "";
+        $sValues = "";
+        $i = 0;
+        
+        foreach( $asData as $sColumn => $vValue ){
+            $i++;
+            if ( $i === 1 ){
+                $sColumns .= "$sColumn";
+                $sValues  .= "$vValue";
+                continue;
+            } // if ( $i === 1 ){
+            $sColumns .= ", $sColumn";
+            $sValues  .= ", $vValue";
+        } // foreach( $asData as $sColumn => $vValue ){
+        
+        $sqlInsert = "INSERT INTO $sTable ($sColumns) VALUES ($sValues)";
+        echo $sqlInsert;
+        $this->exec($sqlInsert);
+        
+    } // public function insert( $sTable, array $asData ){
 
     public function update(){
         // TODO:

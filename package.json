@@ -6,8 +6,8 @@
   "author": "aabreves <aa.breves@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
+    "bootstrap": "4.3.1",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.7"
   }
 }

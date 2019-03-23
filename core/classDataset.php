@@ -14,6 +14,7 @@ class Dataset extends Database{
     protected $abPrimary;
     
     function __construct(){
+        parent::__construct();
         $this->startDatabase();
     }
     
@@ -28,7 +29,11 @@ class Dataset extends Database{
     }
     
     public function select( array $asFields, array $asFilter ){
-        $this->select_( $this->sTable, $this->asFields, $asFilter );
+        $this->select_( $this->sTable, $asFields, $asFilter );
+    }
+    
+    protected function insert( array $asColumns ){
+        $this->insert_( $this->sTable, $asColumns );
     }
     
 }
